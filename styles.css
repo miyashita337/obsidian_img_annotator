@@ -1,0 +1,119 @@
+/* Image Annotator Plugin Styles */
+
+/* Modal */
+.image-annotator-modal .modal-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 0;
+  overflow: hidden;
+}
+
+/* Toolbar */
+.ia-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 10px;
+  background: var(--background-secondary);
+  border-bottom: 1px solid var(--background-modifier-border);
+  flex-shrink: 0;
+  flex-wrap: wrap;
+}
+
+.ia-tool-group,
+.ia-action-group,
+.ia-color-group {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.ia-separator {
+  width: 1px;
+  height: 24px;
+  background: var(--background-modifier-border);
+  margin: 0 6px;
+}
+
+/* Buttons */
+.ia-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 32px;
+  height: 32px;
+  padding: 4px 8px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  background: var(--background-primary);
+  color: var(--text-normal);
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 1;
+  transition: background 0.1s, border-color 0.1s;
+}
+
+.ia-btn:hover {
+  background: var(--background-modifier-hover);
+  border-color: var(--background-modifier-border);
+}
+
+.ia-btn.ia-active {
+  background: var(--interactive-accent);
+  color: var(--text-on-accent);
+  border-color: var(--interactive-accent);
+}
+
+.ia-btn.ia-disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+/* Color buttons */
+.ia-color-btn {
+  width: 24px;
+  height: 24px;
+  min-width: 24px;
+  border-radius: 50%;
+  padding: 0;
+  border: 2px solid transparent;
+}
+
+.ia-color-btn.ia-active {
+  border-color: var(--interactive-accent);
+  box-shadow: 0 0 0 2px var(--background-primary),
+    0 0 0 4px var(--interactive-accent);
+}
+
+/* Canvas container */
+.ia-canvas-container {
+  flex: 1;
+  overflow: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--background-primary-alt);
+  position: relative;
+}
+
+.ia-canvas {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  cursor: crosshair;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Text input overlay */
+.ia-text-input {
+  position: absolute;
+  background: transparent;
+  border: 1px dashed var(--interactive-accent);
+  outline: none;
+  font-family: sans-serif;
+  font-weight: bold;
+  padding: 2px 4px;
+  min-width: 100px;
+  z-index: 10;
+}

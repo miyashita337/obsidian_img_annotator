@@ -1,0 +1,9 @@
+{
+  "id": "image-annotator",
+  "name": "Image Annotator",
+  "version": "0.1.0",
+  "minAppVersion": "1.0.0",
+  "description": "Annotate images with rectangles, arrows, text, and mosaic directly in Obsidian",
+  "author": "harieshokunin",
+  "isDesktopOnly": true
+}
